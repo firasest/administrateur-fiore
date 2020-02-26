@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!doctype html>
 <html lang="en">
 
@@ -59,17 +60,17 @@
             
                                         <div class="form-group">
                                             <label for="useremail">Email</label>
-                                            <input type="email" class="form-control" id="useremail" placeholder="Saisissez votre Email">        
+                                            <input type="email" class="form-control" id="useremail" name="email" placeholder="Saisissez votre Email">        
                                         </div>
                 
                                         <div class="form-group">
                                             <label for="username">Nom d'utilisateur</label>
-                                            <input type="text" class="form-control" id="username" placeholder="Saisissez votre nom d'utilisateur">
+                                            <input type="text" class="form-control" id="username"  name="username" placeholder="Saisissez votre nom d'utilisateur">
                                         </div>
                 
                                         <div class="form-group">
                                             <label for="userpassword">Mot de passe</label>
-                                            <input type="password" class="form-control" id="userpassword" placeholder="Saisissez votre Mot de passe">        
+                                            <input type="password" class="form-control" id="userpassword" name="userpassword"  placeholder="Saisissez votre Mot de passe">        
                                         </div>
                     
                                         <div class="mt-4">

@@ -87,22 +87,33 @@
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label for="productname">Titre</label>
-                                                        <input id="productname" name="productname" type="text" class="form-control">
+                                                        <input id="productname" name="titre" type="text" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="productdesc">Description</label>
+                                                        <textarea class="form-control" id="productdesc" name="description" rows="5"></textarea>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="manufacturername">Produit</label>
-                                                        <input id="manufacturername" name="manufacturername" type="text" class="form-control">
+                                                        <input id="manufacturername" name="produit" type="text" class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="manufacturerbrand">Code Produit</label>
-                                                        <input id="manufacturerbrand" name="manufacturerbrand" type="text" class="form-control">
+                                                        <input id="manufacturerbrand" name="codeproduit" type="text" class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="price">Poids</label>
-                                                        <input id="price" name="price" type="text" class="form-control" placeholder="DNT">
+                                                        <input id="price" name="poids" type="text" class="form-control" placeholder="poids">
                                                     </div>
                                                 </div>
-        
+                                                <div class="form-group">
+                                                        <label for="manufacturername">Code ean</label>
+                                                        <input id="manufacturername" name="codeean" type="text" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="manufacturername">dlc</label>
+                                                        <input id="manufacturername" name="dlc" type="text" class="form-control">
+                                                    </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label class="control-label">Categorie</label>
@@ -112,10 +123,7 @@
                                                             <option value="HI">Documentaire</option>
                                                         </select>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="manufacturername">Code ean</label>
-                                                        <input id="manufacturername" name="manufacturername" type="text" class="form-control">
-                                                    </div>
+                                                   
                                                     <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label class="control-label">Categorie2</label>
@@ -126,10 +134,7 @@
                                                         </select>
                                                     </div>
                                                     
-                                                    <div class="form-group">
-                                                        <label for="productdesc">Description</label>
-                                                        <textarea class="form-control" id="productdesc" rows="5"></textarea>
-                                                    </div>
+                                                    
                                                     
                                                 </div>
                                             </div>
@@ -146,7 +151,7 @@
 
                                         <form action="https://themesbrand.com/" method="post" class="dropzone">
                                             <div class="fallback">
-                                                <input name="file" type="file" multiple />
+                                                <input name="image" type="file" multiple />
                                             </div>
             
                                             <div class="dz-message needsclick">

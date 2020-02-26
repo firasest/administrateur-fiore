@@ -97,7 +97,7 @@ $donnees = $req->fetch();
                                                 Select image to upload:
                                                     <input type="file" name="fileToUpload" id="fileToUpload">
                                                     <input type="submit" value="Upload Image" name="submit">                                                </div>
-                                            </div>
+                                                </div>
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">Titre</label>
                                                 <div class="col-lg-10">
