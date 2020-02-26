@@ -60,12 +60,12 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Ajout du Produit</h4>
+                                    <h4 class="mb-0 font-size-18">Produits</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Ecommerce</a></li>
-                                            <li class="breadcrumb-item active">Ajout du Produit</li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
+                                            <li class="breadcrumb-item active">Ajouter Produits</li>
                                         </ol>
                                     </div>
                                     
@@ -79,7 +79,7 @@
                                 <div class="card">
                                     <div class="card-body">
         
-                                        <h4 class="card-title">Information du Produit</h4>
+                                        <h4 class="card-title">Information du Recette</h4>
                                         <p class="card-title-desc">Remplissez toutes les informations ci-dessous</p>
         
                                         <form>
@@ -98,14 +98,14 @@
                                                         <input id="manufacturerbrand" name="manufacturerbrand" type="text" class="form-control">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="price">Prix</label>
+                                                        <label for="price">Poids</label>
                                                         <input id="price" name="price" type="text" class="form-control" placeholder="DNT">
                                                     </div>
                                                 </div>
         
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="control-label">Category</label>
+                                                        <label class="control-label">Categorie</label>
                                                         <select class="form-control select2">
                                                             <option>Select</option>
                                                             <option value="AK">Fiction</option>
@@ -118,7 +118,7 @@
                                                     </div>
                                                     <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="control-label">Category</label>
+                                                        <label class="control-label">Categorie2</label>
                                                         <select class="form-control select2">
                                                             <option>Select</option>
                                                             <option value="AK">En Stock</option>
@@ -167,9 +167,9 @@
                                         
                                         
         
-                                            <button type="submit" class="btn btn-primary mr-1 waves-effect waves-light">Sauvegarde</button>
-                                            <button type="submit" class="btn btn-secondary waves-effect">Annuler</button>
-        
+                                                <button type="submit" class="btn btn-primary">Ajouter</button>
+                                                <button type="submit" class="btn btn-primary">Modifier</button>
+                                                <button type="submit" class="btn btn-primary">Supprimer</button>
                                         </form>
         
                                     </div>

@@ -44,9 +44,8 @@
                         <span>Produits</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="ecommerce-add-product.php">Ajouter Produits</a></li>
-                        <li><a href="auth-register.html">Modifier Produits</a></li>
-                        <li><a href="auth-recoverpw.html">Supprimer Produits</a></li>
+                        <li><a href="ecommerce-add-product.php">Gestion Produits</a></li>
+                        
                     </ul>
                 </li>
 
@@ -69,9 +68,8 @@
                         <span>Recette</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="ecommerce-add-recette">Ajouter Recette</a></li>
-                        <li><a href="auth-register.html">Modifier Recette</a></li>
-                        <li><a href="auth-recoverpw.html">Supprimer Recette</a></li>
+                        <li><a href="ecommerce-add-recette">Gestion Recette</a></li>
+                        
                         
                     </ul>
                 </li>
@@ -82,8 +80,8 @@
                         <span>Pages</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="pages-starter.html">Savez_vous</a></li>
-                        <li><a href="pages-maintenance.html">Qui somme nous</a></li>
+                        <li><a href="savez_vous.php">Savez_vous</a></li>
+                        <li><a href="qui_somme_nous">Qui somme nous</a></li>
                         
                     </ul>
                 </li>

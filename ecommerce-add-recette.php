@@ -98,14 +98,14 @@
                                                         <input id="manufacturerbrand" name="manufacturerbrand" type="text" class="form-control">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="price">Prix</label>
+                                                        <label for="price">Poids</label>
                                                         <input id="price" name="price" type="text" class="form-control" placeholder="DNT">
                                                     </div>
                                                 </div>
         
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="control-label">Category</label>
+                                                        <label class="control-label">Categorie</label>
                                                         <select class="form-control select2">
                                                             <option>Select</option>
                                                             <option value="AK">Fiction</option>
@@ -118,7 +118,7 @@
                                                     </div>
                                                     <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class="control-label">Category</label>
+                                                        <label class="control-label">Categorie2</label>
                                                         <select class="form-control select2">
                                                             <option>Select</option>
                                                             <option value="AK">En Stock</option>
@@ -167,9 +167,9 @@
                                         
                                         
         
-                                            <button type="submit" class="btn btn-primary mr-1 waves-effect waves-light">Sauvegarde</button>
-                                            <button type="submit" class="btn btn-secondary waves-effect">Annuler</button>
-        
+                                                <button type="submit" class="btn btn-primary">Ajouter</button>
+                                                <button type="submit" class="btn btn-primary">Modifier</button>
+                                                <button type="submit" class="btn btn-primary">Supprimer</button>
                                         </form>
         
                                     </div>
