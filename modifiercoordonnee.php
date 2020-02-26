@@ -67,12 +67,12 @@ $donnees = $req->fetch();
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Pages</h4>
+                                    <h4 class="mb-0 font-size-18">coordonnee Contact</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
-                                            <li class="breadcrumb-item active">Qui_somme_nous</li>
+                                            <li class="breadcrumb-item active">Contact</li>
                                         </ol>
                                     </div>
                                     
@@ -85,41 +85,50 @@ $donnees = $req->fetch();
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title mb-4">Qui_somme_nous</h4>
-                                        <form action = "#" method = "post">
-                                        
-
-		
-                                        <form action="Controller/backup/Ajoutquisommenous.php" method="post">
-                                       
+                                        <h4 class="card-title mb-4">Contact</h4>
+                                        <form>
                                             <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Titre</label>
+                                                <label for="projectname" class="col-form-label col-lg-2">Adresse</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="titre" type="text" class="form-control" placeholder="Titre">
+                                                    <input id="projectname" name="adresse" type="text" class="form-control" placeholder="<?php echo $donnees['adresse'];?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Description</label>
+                                                <label for="projectname" class="col-form-label col-lg-2">email</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="description" type="text" class="form-control" placeholder="description">
+                                                    <input id="projectname" name="email" type="text" class="form-control" placeholder="<?php echo $donnees['email'];?>">
                                                 </div>
                                             </div>
 
-                                        
+                                            <div class="form-group row mb-4">
+                                                <label for="projectname" class="col-form-label col-lg-2">tel</label>
+                                                <div class="col-lg-10">
+                                                    <input id="projectname" name="tel" type="text" class="form-control" placeholder="<?php echo $donnees['tel'];?>">
+                                                </div>
                                             </div>
+
+                                            <div class="form-group row mb-4">
+                                                <label for="projectname" class="col-form-label col-lg-2">fax</label>
+                                                <div class="col-lg-10">
+                                                    <input id="projectname" name="projectname" type="text" class="form-control" placeholder="<?php echo $donnees['fax'];?>">
+                                                </div>
+                                            </div>
+
+
                                             
-                                        </div>
+
+                                            
+
+                                            
                                         
+                                            </div>
+                                        </div>
                                         <div class="row justify-content-end">
                                             <div class="col-lg-10">
-                                                <button type="submit" class="btn btn-primary">Ajouter</button>
-                                                <button type="submit" class="btn btn-primary">Modifier</button>
-                                                <button type="reset" class="btn btn-primary">Supprimer</button>
+                                                <button type="submit" class="btn btn-primary">Sauvegarde</button>
                                             </div>
                                         </div>
-                                       
-                                        
 
                                     </div>
                                 </div>

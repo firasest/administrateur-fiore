@@ -1,24 +1,14 @@
 <?php
 class Produit{
 private $titre;
-private $productdesc;
-private $produit;
-private $codeproduit;
-private $poids;
-private $codeean;
-private $dlc;
+private $description;
+
                 
 
-function __construct($titre,$productdesc,$produit,$codeproduit,$poids,$codeean,$dlc){
+function __construct($titre,$description){
 $this->titre = $titre;
-$this->productdesc = $productdesc;
-$this->produit = $produit;
-$this->codeproduit = $codeproduit;
-$this->poids = $poids;
-$this->codeean = $codeean;
-$this->dlc = $dlc;
-$this->codeean = $codeean;
-$this->dlc = $dlc;
+$this->description = $description;
+
 
 
 }
@@ -35,12 +25,12 @@ include('../includes/connect_db.php');
     
 	
     
-    $req = $bdd->query("SELECT * FROM admin WHERE login LIKE '$this->login'");
+    $req = $bdd->query("SELECT * FROM quisommenous ");
     $count = $req->rowCount();
     
     if ($count == 0) {
 		//$type= intval($this->type);
-		$req = $bdd->exec ("INSERT INTO `admin`(`nom`, `login`, `password`, `email`) VALUES ('$this->nom','$this->login','$this->password','$this->email')");
+		$req = $bdd->exec ("INSERT INTO `quisommenous`(`titre`, `description`) VALUES ('$this->titre','$this->description')");
 		
 		echo'oui';
                 //return TRUE;
@@ -56,7 +46,7 @@ include('../includes/connect_db.php');
 
        $id=$_GET['id'];
         
-        $r=$bdd->exec("UPDATE `admin` SET `nom`='$this->nom',`login`='$this->login',`password`='$this->password',`email`='$this->email' WHERE id=$id");				
+        $r=$bdd->exec("UPDATE `quisommenous` SET `titre`='$this->titre',`description`='$this->description'");				
         
         echo'oui';
         //return TRUE;
@@ -66,7 +56,7 @@ public function supprimer(){
     
 	include('../includes/connect_db.php');
 
-    $req = $bdd->exec('DELETE FROM admin WHERE id=\''.$_GET['id'].'\''); 
+    $req = $bdd->exec('DELETE FROM quisommenous WHERE id=\''.$_GET['id'].'\''); 
  
 		echo'oui';	
  
