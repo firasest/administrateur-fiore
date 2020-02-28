@@ -2,7 +2,7 @@
 session_start();
 include("includes/connect_db.php");
 
-$req = $bdd->query("SELECT * FROM contact_cord ");
+$req = $bdd->query("SELECT * FROM quisommenous ");
 $donnees = $req->fetch();
 
  ?>
@@ -13,7 +13,7 @@ $donnees = $req->fetch();
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/projects-create.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:42 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Modifier coordonnee </title>
+        <title>Qui_somme_nous </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -86,12 +86,28 @@ $donnees = $req->fetch();
                                 <div class="card">
                                     <div class="card-body">
                                         <h4 class="card-title mb-4">Qui_somme_nous</h4>
-                                        <form action = "#" method = "post">
+                                        
                                         
 
 		
-                                        <form action="Controller/backup/Ajoutquisommenous.php" method="post">
+                                        <form action="Controller/Ajoutquisommenous.php" method="post">
                                        
+                                        <?php 
+                      if (isset($_GET['resultat'])) {
+
+                       if ($_GET['resultat'] == 'oui') {
+                      ?>
+
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                    Message ajouter avec succes.
+                                    </div></div>
+
+                          <?php  }else{ ?>
+                            <div class="container"></div>
+                          <?php } 
+                            }?>
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">Titre</label>
                                                 <div class="col-lg-10">
@@ -110,17 +126,11 @@ $donnees = $req->fetch();
                                             </div>
                                             
                                         </div>
-                                        
-                                        <div class="row justify-content-end">
-                                            <div class="col-lg-10">
-                                                <button type="submit" class="btn btn-primary">Ajouter</button>
-                                                <button type="submit" class="btn btn-primary">Modifier</button>
-                                                <button type="reset" class="btn btn-primary">Supprimer</button>
-                                            </div>
-                                        </div>
                                        
-                                        
-
+                                    <button class="btn btn-primary btn-lg btn-animated btn-style-1" type="submit">
+									<span class="btn-label">Ajouter</span>
+									
+									</button>    
                                     </div>
                                 </div>
                             </div>

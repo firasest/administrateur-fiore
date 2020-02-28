@@ -1,5 +1,5 @@
 <?php
-class Produit{
+class Quisommenous{
 private $titre;
 private $description;
 
