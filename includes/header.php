@@ -2,7 +2,7 @@
                     <div class="d-flex">
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
-                            <a href="index.html" class="logo logo-dark">
+                            <a href="dashboard.php" class="logo logo-dark">
                                 <span class="logo-sm">
                                     <img src="assets/images/logo.png" alt="" height="50">
                                 </span>
@@ -11,7 +11,7 @@
                                 </span>
                             </a>
 
-                            <a href="index.html" class="logo logo-light">
+                            <a href="dashboard.php" class="logo logo-light">
                                 <span class="logo-sm">
                                     <img src="assets/images/logo.png" alt="" height="50">
                                 </span>

@@ -23,7 +23,7 @@
 
     <body>
         <div class="home-btn d-none d-sm-block">
-            <a href="index.html" class="text-dark"><i class="fas fa-home h2"></i></a>
+            <a href="#" class="text-dark"><i class="fas fa-home h2"></i></a>
         </div>
         <div class="account-pages my-5 pt-sm-5">
             <div class="container">
@@ -45,7 +45,7 @@
                             </div>
                             <div class="card-body pt-0"> 
                                 <div>
-                                    <a href="index.html">
+                                    <a href="#">
                                         <div class="avatar-md profile-user-wid mb-4">
                                             <span class="avatar-title rounded-circle bg-light">
                                                 <img src="assets/images/logo.png" alt="" class="rounded-circle" height="34">

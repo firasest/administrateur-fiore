@@ -1,11 +1,4 @@
-<?php
-session_start();
-include("includes/connect_db.php");
 
-$req = $bdd->query("SELECT * FROM quisommenous ");
-$donnees = $req->fetch();
-
- ?>
 <!doctype html>
 <html lang="en">
 
@@ -90,9 +83,8 @@ $donnees = $req->fetch();
                                         
 
 		
-                                        <form action="Controller/Ajoutquisommenous.php" method="post">
-                                       
-                                        <?php 
+                                        <form action="Controller/ajouterqsn.php" method="post">
+                     <?php 
                       if (isset($_GET['resultat'])) {
 
                        if ($_GET['resultat'] == 'oui') {
@@ -108,29 +100,24 @@ $donnees = $req->fetch();
                             <div class="container"></div>
                           <?php } 
                             }?>
-                                            <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Titre</label>
-                                                <div class="col-lg-10">
-                                                    <input id="projectname" name="titre" type="text" class="form-control" placeholder="Titre">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Description</label>
-                                                <div class="col-lg-10">
-                                                    <input id="projectname" name="description" type="text" class="form-control" placeholder="description">
-                                                </div>
-                                            </div>
-
-                                        
-                                            </div>
-                                            
-                                        </div>
-                                       
-                                    <button class="btn btn-primary btn-lg btn-animated btn-style-1" type="submit">
-									<span class="btn-label">Ajouter</span>
 									
-									</button>    
+									<div class="form-group">
+									    <label for="msg-email">Titre</label>
+									    <input type="text" class="form-control" id="msg-email" placeholder="titre" name="titre">
+									</div>
+									
+									<div class="form-group">
+									    <label for="msg-text">Description</label>
+									    <textarea rows="6" class="form-control" id="msg-text" placeholder="description" name="description"></textarea>
+									</div>
+									
+									<button class="btn btn-primary btn-lg btn-animated btn-style-1" type="submit">
+									<span class="btn-label">Ajouter</span>
+									<span class="btn-icon fa fa-envelope"></span>
+									</button>
+									
+									
+								</form> 
                                     </div>
                                 </div>
                             </div>
@@ -142,20 +129,7 @@ $donnees = $req->fetch();
                 <!-- End Page-content -->
 
                 
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Skote.
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="text-sm-right d-none d-sm-block">
-                                    Design & Develop by Themesbrand
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <?php include("includes/footeradmin.php") ?>
             </div>
             <!-- end main content-->
 
