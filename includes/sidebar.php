@@ -80,8 +80,10 @@
                         <span>Pages</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="savez_vous.php">Savez_vous</a></li>
-                        <li><a href="qui_somme_nous">Qui somme nous</a></li>
+                    <li><a href="listes.php">Listes Savez_vous</a></li>
+                    <li><a href="listesqsn.php">Listes Qui_somme_nous</a></li>
+                       <!-- <li><a href="savez_vous.php">Savez_vous</a></li>
+                        <li><a href="qui_somme_nous">Qui somme nous</a></li>-->
                         
                     </ul>
                 </li>

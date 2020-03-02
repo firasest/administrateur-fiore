@@ -1,10 +1,8 @@
 <?php
-session_start();
 include("includes/connect_db.php");
-
-$req = $bdd->query("SELECT * FROM contact_cord ");
+$id= $_GET['id'];
+$req = $bdd->query("SELECT * FROM quisommenous WHERE id=$id");
 $donnees = $req->fetch();
-
  ?>
 <!doctype html>
 <html lang="en">
@@ -13,7 +11,7 @@ $donnees = $req->fetch();
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/projects-create.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:42 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Modifier coordonnee </title>
+        <title>Modifier Qui_somme_nous </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -72,7 +70,7 @@ $donnees = $req->fetch();
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
-                                            <li class="breadcrumb-item active">Savez_vous</li>
+                                            <li class="breadcrumb-item active">Qui_somme_nous</li>
                                         </ol>
                                     </div>
                                     
@@ -85,57 +83,49 @@ $donnees = $req->fetch();
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title mb-4">Savez_vous</h4>
-                                        <form action = "#" method = "post">
+                                        <h4 class="card-title mb-4">Qui_somme_nous</h4>
+                                        
                                         
 
 		
-                                        <form >
-                                        <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Image </label>
-                                                <div class="col-lg-10">
-                                                Select image to upload:
-                                                    <input type="file" name="fileToUpload" id="fileToUpload">
-                                                    <input type="submit" value="Upload Image" name="submit">                                                </div>
-                                                </div>
-                                            <div class="form-group row mb-4">
+                                        <form action="Controller/ajouterqsn.php" method="post">
+                     <?php 
+                      if (isset($_GET['resultat'])) {
+
+                       if ($_GET['resultat'] == 'oui') {
+                      ?>
+
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                    Qui_somme_nous modifier avec succes.
+                                    </div></div>
+
+                          <?php  }else{ ?>
+                            <div class="container"></div>
+                          <?php } 
+                            }?>
+									
+									<div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">Titre</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="titre" type="text" class="form-control" placeholder="Titre">
+                                                    <input id="projectname" name="titre" type="text" class="form-control" placeholder="Titre" value="<?php echo $donnees['titre']; ?>">
                                                 </div>
                                             </div>
-
-                                            <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Description</label>
-                                                <div class="col-lg-10">
-                                                    <input id="projectname" name="description" type="text" class="form-control" placeholder="description">
-                                                </div>
-                                            </div>
-
-                                            
-
-                                            
-                                            
-
-
-                                            
-
-                                            
-
-                                            
-                                        
-                                            </div>
-                                        </div>
-                                        <div class="row justify-content-end">
-                                            <div class="col-lg-10">
-                                                <button type="submit" class="btn btn-primary">Ajouter</button>
-                                                <button type="submit" class="btn btn-primary">Modifier</button>
-                                                <button type="submit" class="btn btn-primary">Supprimer</button>
-                                            </div>
-                                        </div>
-                                       
-                                        
-
+                                            <div class="form-group">
+                                                        <label for="productdesc">Description</label>
+                                                        <textarea class="form-control" id="productdesc" name="description" rows="5"  > <?php echo $donnees['description']; ?></textarea>
+                                           </div>
+									
+									
+									
+									<button class="btn btn-primary btn-lg btn-animated btn-style-1" type="submit">
+									<span class="btn-label">Modifier</span>
+									<span class="btn-icon fa fa-envelope"></span>
+									</button>
+									
+									
+								</form> 
                                     </div>
                                 </div>
                             </div>
@@ -147,20 +137,7 @@ $donnees = $req->fetch();
                 <!-- End Page-content -->
 
                 
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Skote.
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="text-sm-right d-none d-sm-block">
-                                    Design & Develop by Themesbrand
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <?php include("includes/footeradmin.php") ?>
             </div>
             <!-- end main content-->
 
