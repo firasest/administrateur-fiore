@@ -13,7 +13,7 @@ $donnees = $req->fetch();
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/projects-create.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:42 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Modifier coordonnee </title>
+        <title>Supprimer Contact </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -67,12 +67,12 @@ $donnees = $req->fetch();
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">coordonnee Contact</h4>
+                                    <h4 class="mb-0 font-size-18">Supprimer Contact</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
-                                            <li class="breadcrumb-item active">Contact</li>
+                                            <li class="breadcrumb-item active">Supprimer Contact</li>
                                         </ol>
                                     </div>
                                     
@@ -130,7 +130,7 @@ $donnees = $req->fetch();
                                         </div>
                                         <div class="row justify-content-end">
                                             <div class="col-lg-10">
-                                                <button type="submit" name="modifier" class="btn btn-primary">Modifier</button>
+                                                <button type="submit" name="modifier" class="btn btn-primary">Supprimer</button>
                                             </div>
                                         </div>
 

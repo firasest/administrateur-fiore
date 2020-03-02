@@ -119,7 +119,7 @@ $donnees = $req->fetch();
                                            </div>
 									
 									<button class="btn btn-primary btn-lg btn-animated btn-style-1" type="submit">
-									<span class="btn-label">Modifier</span>
+									<span class="btn-label">Supprimer</span>
 									<span class="btn-icon fa fa-envelope"></span>
 									</button>
 									

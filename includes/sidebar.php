@@ -44,7 +44,7 @@
                         <span>Produits</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="ecommerce-add-product.php">Gestion Produits</a></li>
+                        <li><a href="listesproduits.php">Listes Produits</a></li>
                         
                     </ul>
                 </li>
@@ -56,7 +56,7 @@
                         <span>Coordonnee Contact</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="modifiercoordonnee.php">contact</a></li>
+                        <li><a href="listescoordonnee.php">Listes contact</a></li>
                         
                     </ul>
                 </li>
@@ -68,7 +68,7 @@
                         <span>Recette</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="ecommerce-add-recette">Gestion Recette</a></li>
+                        <li><a href="listesrecette.php">listes  Recette</a></li>
                         
                         
                     </ul>

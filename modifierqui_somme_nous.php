@@ -83,12 +83,12 @@ $donnees = $req->fetch();
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title mb-4">Qui_somme_nous</h4>
+                                        <h4 class="card-title mb-4">Modifier Qui_somme_nous rtr</h4>
                                         
                                         
 
 		
-                                        <form action="Controller/ajouterqsn.php" method="post">
+        <form action="Controller/modifierqsn.php" method="post">
                      <?php 
                       if (isset($_GET['resultat'])) {
 
