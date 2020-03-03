@@ -72,7 +72,7 @@ $req = $bdd->query("SELECT * FROM quisommenous ");
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
-                                            <li class="breadcrumb-item active">Savez_vous</li>
+                                            <li class="breadcrumb-item active">Qui somme nous</li>
                                         </ol>
                                     </div>
                                     
@@ -82,7 +82,23 @@ $req = $bdd->query("SELECT * FROM quisommenous ");
                         <!-- end page title -->
 
                         
-                                        <form action = "#" method = "post">
+                        <?php 
+                      if (isset($_GET['resultat'])) {
+
+                       if ($_GET['resultat'] == 'oui') {
+                      ?>
+
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                    Qui_somme_nous modifier avec succes.
+                                    
+                                    </div></div>
+
+                          <?php  }else{ ?>
+                            <div class=""></div>
+                          <?php } 
+                            }?>
                                         
 
                                      
@@ -129,7 +145,7 @@ $req = $bdd->query("SELECT * FROM quisommenous ");
                                         
                                           
                                        
-                                        </form>
+                                       
 
                                     </div>
                                 </div>

@@ -88,7 +88,7 @@ $donnees = $req->fetch();
                                         
 
 		
-                                        <form action="Controller/ajouterqsn.php" method="post">
+                                        <form action="Controller/modifierrecette.php" method="post">
                      <?php 
                       if (isset($_GET['resultat'])) {
 

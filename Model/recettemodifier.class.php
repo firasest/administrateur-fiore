@@ -1,5 +1,7 @@
 <?php
+
 class About{
+
 private $titre;
 private $description;
 
@@ -44,13 +46,17 @@ include('../includes/connect_db.php');
 
     include('../includes/connect_db.php');
 
-       $id=$_GET['id'];
+    $id=$_GET['id'];
         
-        $r=$bdd->exec("UPDATE quisommenous  SET titre`='$this->titre',description`='$this->description' WHERE id=$id");
-        
-        
-        echo'oui';
-        //return TRUE;
+    $r=$bdd->exec("UPDATE `recette` SET 
+        `titre`='$this->titre',
+        `description`='$this->description',
+       
+         WHERE id=$id");
+    
+    
+    echo'oui';
+    //return TRUE;
  			}	
 			
 

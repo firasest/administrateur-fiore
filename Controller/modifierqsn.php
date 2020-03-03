@@ -1,7 +1,7 @@
 <?php
-require_once('../Model/qsn.class.php');
-$contact = new Contact($_POST['titre'],$_POST['description']);
-$contact->modifier();
-header("location:../qui_somme_nous.php?resultat=oui");
+require_once('../Model/qsnmodifier.class.php');
+$about = new About($_POST['titre'],$_POST['description']);
+$about->modifier();
+header("location:../listesqsn.php?resultat=oui");
 //exit();
 ?>

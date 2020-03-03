@@ -82,14 +82,11 @@ $req = $bdd->query("SELECT * FROM recette ");
                         <!-- end page title -->
 
                         
-                                        <form action = "#" method = "post">
+                                        
                                         
 
                                      
-                                  
-
-                                            
-                                        <div class="container">
+ <div class="container">
   <h2>Listes Recette</h2>
               
   <table class="table">
@@ -129,7 +126,7 @@ $req = $bdd->query("SELECT * FROM recette ");
                                         
                                           
                                        
-                                        </form>
+                                       
 
                                     </div>
                                 </div>
