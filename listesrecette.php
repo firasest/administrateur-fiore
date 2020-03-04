@@ -2,7 +2,7 @@
 session_start();
 include("includes/connect_db.php");
 
-$req = $bdd->query("SELECT * FROM recette ");
+$req = $bdd->query("SELECT * FROM recette");
 //$donnees = $req->fetch();
 
  ?>
@@ -83,7 +83,32 @@ $req = $bdd->query("SELECT * FROM recette ");
 
                         
                                         
-                                        
+                          
+                        <?php 
+                      if (isset($_GET['resultat'])) {
+
+                       if ($_GET['resultat'] == 'oui') {
+                      ?>
+
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                    Recette Ajouter avec succes.
+                                    
+                                    </div></div>
+
+                          <?php  }else{ 
+                              if ($_GET['resultat'] == 'ouiModif')
+                              ?>
+                            
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                    Recette Modifier avec succes.
+                                    
+                                    </div></div>
+                          <?php } 
+                            }?>               
 
                                      
  <div class="container">
@@ -95,6 +120,7 @@ $req = $bdd->query("SELECT * FROM recette ");
         <th>id</th>
         <th>titre</th>
         <th>description</th>
+       
         <th>Action</th>
       </tr>
     </thead>
@@ -104,9 +130,10 @@ $req = $bdd->query("SELECT * FROM recette ");
         <td><?php echo $donnees['id']; ?></td>
         <td><?php echo $donnees['titre']; ?></td>
         <td><?php echo $donnees['description']; ?></td>
+        
         <td>
         
-        <a href="modifierrecette.php?id=<?php echo $donnees['id']; ?>">Modifier</a>||<a href="supprimerrecette.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
+        <a href="modifierrecette.php?id=<?php echo $donnees['id']; ?>">Modifier</a>||<a href="Controller/supp_recette.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
         </td>
       </tr>
       

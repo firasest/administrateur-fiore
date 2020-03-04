@@ -125,7 +125,8 @@ $req = $bdd->query("SELECT * FROM quisommenous ");
         <td><?php echo $donnees['description']; ?></td>
         <td>
         
-        <a href="modifierqui_somme_nous.php?id=<?php echo $donnees['id']; ?>">Modifier</a>||<a href="suppquisommenous.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
+        <a href="Controller/modifier_about.php?id=<?php echo $donnees['id']; ?>">Modifier</a>
+||<a href="suppquisommenous.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
         </td>
       </tr>
       

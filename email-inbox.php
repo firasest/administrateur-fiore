@@ -3,7 +3,7 @@
 include("includes/connect_db.php");
 
 $req = $bdd->query("SELECT * FROM message_contact ");
-//$donnees = $req->fetch();
+$donnees = $req->fetch();
  ?>
 <!doctype html>
 <html lang="en">
@@ -85,6 +85,10 @@ $req = $bdd->query("SELECT * FROM message_contact ");
                                     <button type="button" class="btn btn-danger btn-block waves-effect waves-light" data-toggle="modal" data-target="#composemodal">
                                         Compose
                                     </button>
+                                   
+                                    <a href="Controller/supp_message.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
+                                    
+                                   
                                                                     </div>
                                 <!-- End Left sidebar -->
         

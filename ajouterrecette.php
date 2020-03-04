@@ -1,9 +1,4 @@
-<?php
-include("includes/connect_db.php");
-$id= $_GET['id'];
-$req = $bdd->query("SELECT * FROM recette WHERE id=$id");
-$donnees = $req->fetch();
- ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -11,7 +6,7 @@ $donnees = $req->fetch();
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/projects-create.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:42 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Modifier Recette </title>
+        <title>Ajouter Recette </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -65,12 +60,12 @@ $donnees = $req->fetch();
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Modifier Recette</h4>
+                                    <h4 class="mb-0 font-size-18">Ajouter Recette</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
-                                            <li class="breadcrumb-item active">Modifier Recette</li>
+                                            <li class="breadcrumb-item active">Ajouter Recette</li>
                                         </ol>
                                     </div>
                                     
@@ -83,44 +78,30 @@ $donnees = $req->fetch();
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title mb-4">Modifier Recette</h4>
+                                        <h4 class="card-title mb-4">Ajouter Recette</h4>
                                         
                                         
 
 		
-                                        <form action="Controller/modifier_recette.php?id=<?php echo $donnees['id']; ?>" method="post">
-                     <?php 
-                      if (isset($_GET['resultat'])) {
+                                        <form action="Controller/ajouter_recette.php" method="post">
+                   
 
-                       if ($_GET['resultat'] == 'oui') {
-                      ?>
-
-                          <br><div class="container"><div class="alert alert-success alert-dismissible">
-                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                    
-                                    Qui_somme_nous modifier avec succes.
-                                    </div></div>
-
-                          <?php  }else{ ?>
-                            <div class="container"></div>
-                          <?php } 
-                            }?>
-									
+									<input type="text" value="002.png" name="img" hidden="hidden">
 									<div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">Titre</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="titre" type="text" class="form-control" placeholder="Titre" value="<?php echo $donnees['titre']; ?>">
+                                                    <input id="projectname" name="titre" type="text" class="form-control" placeholder="Titre" >
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                         <label for="productdesc">Description</label>
-                                                        <textarea class="form-control" id="productdesc" name="description" rows="5"  > <?php echo $donnees['description']; ?></textarea>
+                                                        <textarea class="form-control" id="productdesc" name="description" rows="5"  > </textarea>
                                            </div>
 									
 									
 									
 									<button class="btn btn-primary btn-lg btn-animated btn-style-1" type="submit">
-									<span class="btn-label">Modifier</span>
+									<span class="btn-label">Ajouter</span>
 									<span class="btn-icon fa fa-envelope"></span>
 									</button>
 									

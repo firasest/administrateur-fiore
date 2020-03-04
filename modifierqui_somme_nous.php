@@ -88,7 +88,7 @@ $donnees = $req->fetch();
                                         
 
 		
-       <form action="Controller/modifierqsn.php?id=<?php echo $donnees['id'] ?>" method="post">
+       <form action="Controller/modifier_about.php?id=<?php echo $donnees['id'] ?>" method="post">
                      
 									
 									<div class="form-group row mb-4">
