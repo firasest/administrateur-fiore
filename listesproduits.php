@@ -82,7 +82,31 @@ $req = $bdd->query("SELECT * FROM produit ");
                         <!-- end page title -->
 
                         
-                                        <form action = "#" method = "post">
+                        <?php 
+                      if (isset($_GET['resultat'])) {
+
+                       if ($_GET['resultat'] == 'oui') {
+                      ?>
+
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                    Recette Ajouter avec succes.
+                                    
+                                    </div></div>
+
+                          <?php  }else{ 
+                              if ($_GET['resultat'] == 'ouiModif')
+                              ?>
+                            
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                    Recette Modifier avec succes.
+                                    
+                                    </div></div>
+                          <?php } 
+                            }?>       
                                         
 
                                      

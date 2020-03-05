@@ -18,14 +18,14 @@ function __construct($titre,$description,$img,$produit,$code_produit,$poids,$cod
 
 $this->titre = $titre;
 $this->description = addslashes($description);
-$this->img = $img;
-$this->produit = $produit;
-$this->code_produit = $code_produit;
-$this->poids = $poids;
-$this->code_ean = $code_ean;
-$this->dlc = $dlc;
-$this->catagorie = $catagorie;
-$this->catagorie2 =$catagorie2;
+$this->img = addslashes($img);
+$this->produit = addslashes($produit);
+$this->code_produit = addslashes($code_produit);
+$this->poids = addslashes($poids);
+$this->code_ean = addslashes($code_ean);
+$this->dlc = addslashes($dlc);
+$this->catagorie = addslashes($catagorie);
+$this->catagorie2 =addslashes($catagorie2);
 
 
 

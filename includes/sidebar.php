@@ -45,6 +45,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="listesproduits.php">Listes Produits</a></li>
+                        <li><a href="Ajouterproduct.php">Ajouter Produits</a></li>
                         
                     </ul>
                 </li>
