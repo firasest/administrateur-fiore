@@ -86,86 +86,91 @@ $donnees = $req->fetch();
                                 <div class="card">
                                     <div class="card-body">
                                         <h4 class="card-title mb-4">Modifier Produits</h4>
-                                        <form>
-                                            <div class="form-group row mb-4">
+                                        <form action="Controller/modifier_produit.php?id=<?php echo $donnees['id'] ?>" method="post">
+                                        <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">Titre</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="adresse" type="text" class="form-control" value="<?php echo $donnees['titre'];?>"
-                                                    placeholder="Adresse">
+                                                    <input id="projectname" name="titre" type="text" class="form-control" 
+                                                    placeholder="Titre" value="<?php echo $donnees['titre'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">Description</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="email" type="text" class="form-control" value="<?php echo $donnees['description'];?>"
-                                                    placeholder="Email">
+                                                    <input id="projectname" name="description" type="text" class="form-control" 
+                                                    placeholder="Description" value="<?php echo $donnees['description'] ?>">
                                                 </div>
                                             </div>
 
-                                            <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Image</label>
-                                                <div class="col-lg-10">
-                                                    <input id="projectname" name="tel" type="text" class="form-control" value="<?php echo $donnees['img'];?>"
-                                                    placeholder="Tel">
-                                                </div>
-                                            </div>
+                                            <input type="text" value="002.png" name="img" hidden="hidden" >
 
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">produit</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['produit'];?>"
-                                                    placeholder="Fax">
+                                                    <input id="projectname" name="produit" type="text" class="form-control" 
+                                                    placeholder="Produit" value="<?php echo $donnees['produit'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">code_produit</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['code_produit'];?>"
-                                                    placeholder="Fax">
+                                                    <input id="projectname" name="code_produit" type="text" class="form-control" 
+                                                    placeholder="Code_produit" value="<?php echo $donnees['code_produit'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">poids</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['poids'];?>"
-                                                    placeholder="Fax">
+                                                    <input id="projectname" name="poids" type="text" class="form-control" 
+                                                    placeholder="Poids" value="<?php echo $donnees['poids'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">Code_Ean</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['code_ean'];?>"
-                                                    placeholder="Fax">
+                                                    <input id="projectname" name="code_ean" type="text" class="form-control" 
+                                                    placeholder="Code EAN" value="<?php echo $donnees['code_ean'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">DLC</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['dlc'];?>"
-                                                    placeholder="Fax">
+                                                    <input id="projectname" name="dlc" type="text" class="form-control" 
+                                                    placeholder="DLC" value="<?php echo $donnees['dlc'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">Categorie</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['catagorie'];?>"
-                                                    placeholder="Fax">
+                                                    <input id="projectname" name="catagorie" type="text" class="form-control" 
+                                                    placeholder="Categorie" value="<?php echo $donnees['catagorie'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">Categorie2</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['catagorie2'];?>"
-                                                    placeholder="Fax">
+                                                    <input id="projectname" name="catagorie2" type="text" class="form-control" 
+                                                    placeholder="Categorie2" value="<?php echo $donnees['catagorie2'] ?>">
                                                 </div>
                                             </div>
+
+
+                                            
+
+                                            
+
+                                            
+                                        
+                                            </div>
+                                        </div>
+                                        
 
 
                                             
@@ -181,7 +186,7 @@ $donnees = $req->fetch();
                                                 <button type="submit" name="modifier" class="btn btn-primary">Modifier</button>
                                             </div>
                                         </div>
-
+</form>
                                     </div>
                                 </div>
                             </div>

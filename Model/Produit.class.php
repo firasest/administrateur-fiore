@@ -9,26 +9,20 @@ private $poids;
 private $code_ean;
 private $dlc;
 private $catagorie;
-private $catagorie2;
+private $catagorie2;            
 
+function __construct($img,$titre,$description,$produit,$code_produit,$poids,$code_ean,$dlc,$catagorie,$catagorie2){
 
-                
-
-function __construct($titre,$description,$img,$produit,$code_produit,$poids,$code_ean,$dlc,$catagorie,$catagorie2){
-
-$this->titre = $titre;
+$this->titre = addslashes($titre);
 $this->description = addslashes($description);
-$this->img = addslashes($img);
+$this->img = $img;
 $this->produit = addslashes($produit);
 $this->code_produit = addslashes($code_produit);
 $this->poids = addslashes($poids);
 $this->code_ean = addslashes($code_ean);
 $this->dlc = addslashes($dlc);
 $this->catagorie = addslashes($catagorie);
-$this->catagorie2 =addslashes($catagorie2);
-
-
-
+$this->catagorie2 = addslashes($catagorie2);
 }
 
 public function ajouter(){ 
@@ -36,10 +30,10 @@ public function ajouter(){
   include('../includes/connect_db.php');
       
     
-      $req = $bdd->exec ("INSERT INTO `recette`( `titre`, `description`,`img`,`produit`, `code_produit`,`poids`,
-       `code_ean`,`dlc`, `catagorie`,`catagorie2`) 
-      VALUES ('$this->titre','$this->description','$this->img','$this->produit','$this->code_produit','$this->poids'
-      '$this->code_ean','$this->dlc','$this->catagorie','$this->catagorie2')");
+      $req = $bdd->exec ("INSERT INTO `produit`(`titre`, `description`,`img`, `produit`, `code_produit`,`poids`, `code_ean`, `dlc`,
+      `catagorie`, `catagorie2`,) 
+      VALUES ('$this->titre','$this->description','$this->img','$this->produit','$this->code_produit','$this->poids','$this->code_ean',
+      '$this->dlc','$this->catagorie','$this->catagorie2')");
       
       echo'oui';
                   //return TRUE;
@@ -47,13 +41,23 @@ public function ajouter(){
   }
 
 
-    /*public function modifier(){ 
+    public function modifier(){ 
 
     include('../includes/connect_db.php');
 
     $id=$_GET['id'];
         
-    $req=$bdd->exec("UPDATE `recette` SET  `titre`='$this->titre',`description`='$this->description' WHERE id=$id");
+    $req=$bdd->exec("UPDATE `produit` SET  `titre`='$this->titre',
+    `description`='$this->description' 
+    `img`='$this->img' 
+    `produit`='$this->produit' 
+    `code_produit`='$this->code_produit' 
+    `poids`='$this->poids' 
+    `code_ean`='$this->code_ean' 
+    `dlc`='$this->dlc' 
+    `catagorie`='$this->catagorie' 
+    `catagorie2`='$this->catagorie2'
+    WHERE id=$id");
     
     
     echo'oui';
@@ -66,12 +70,12 @@ public function supprimer(){
     
 	include('../includes/connect_db.php');
 
-    $req = $bdd->exec('DELETE FROM recette WHERE id=\''.$_GET['id'].'\''); 
+    $req = $bdd->exec('DELETE FROM produit WHERE id=\''.$_GET['id'].'\''); 
  
 		echo'oui';	
  
  
-}*/
+}
         
 }
 

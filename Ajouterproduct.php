@@ -168,7 +168,7 @@
                                                 <button type="submit" name="modifier" class="btn btn-primary">Ajouter</button>
                                             </div>
                                         </div>
-
+</form>
                                     </div>
                                 </div>
                             </div>

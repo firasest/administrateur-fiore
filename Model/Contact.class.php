@@ -1,19 +1,20 @@
 <?php
-class Recette{
+class Contact{
  
   private $adresse;
   private $email;
-  private $adresse;
-  private $email;
+  private $tel;
+  private $fax;
 
 
                 
 
-function __construct($titre,$description){
+function __construct($adresse,$email,$tel,$fax){
  
-$this->titre = $titre;
-$this->description = addslashes($description);
-
+$this->adresse = $adresse;
+$this->email = addslashes($email);
+$this->email = addslashes($tel);
+$this->email = addslashes($fax);
 
 
 
@@ -24,7 +25,7 @@ public function ajouter(){
   include('../includes/connect_db.php');
       
     
-      $req = $bdd->exec ("INSERT INTO `recette`( `titre`, `description`) VALUES ('$this->titre','$this->description')");
+      $req = $bdd->exec ("INSERT INTO `contact_cord`( `adresse`, `email`,`tel`, `fax`) VALUES ('$this->adresse','$this->email','$this->tel','$this->fax')");
       
       echo'oui';
                   //return TRUE;
@@ -38,7 +39,7 @@ public function ajouter(){
 
     $id=$_GET['id'];
         
-    $req=$bdd->exec("UPDATE `recette` SET  `titre`='$this->titre',`description`='$this->description' WHERE id=$id");
+    $req=$bdd->exec("UPDATE `contact_cord` SET  `adresse`='$this->adresse',`email`='$this->email',`tel`='$this->tel',`fax`='$this->fax' WHERE id=$id");
     
     
     echo'oui';
@@ -51,7 +52,7 @@ public function supprimer(){
     
 	include('../includes/connect_db.php');
 
-    $req = $bdd->exec('DELETE FROM recette WHERE id=\''.$_GET['id'].'\''); 
+    $req = $bdd->exec('DELETE FROM contact_cord WHERE id=\''.$_GET['id'].'\''); 
  
 		echo'oui';	
  

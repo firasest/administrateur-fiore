@@ -86,7 +86,7 @@ $donnees = $req->fetch();
                                 <div class="card">
                                     <div class="card-body">
                                         <h4 class="card-title mb-4">Supprimer Produits </h4>
-                                        <form>
+                                        <form action="Controller/supp_produit.php" method="post">
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">Titre</label>
                                                 <div class="col-lg-10">

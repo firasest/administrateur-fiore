@@ -11,7 +11,7 @@ $_POST['code_ean'],
 $_POST['dlc'],
 $_POST['catagorie'],
 $_POST['catagorie2']);
-$produit->ajouter();
+$produit->modifier();
 
 header("location:../listesproduits.php?resultat=oui");
 //exit();

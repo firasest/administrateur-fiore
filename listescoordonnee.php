@@ -67,7 +67,7 @@ $req = $bdd->query("SELECT * FROM contact_cord ");
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Pages</h4>
+                                    <h4 class="mb-0 font-size-18">Listes Contact</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
@@ -81,8 +81,32 @@ $req = $bdd->query("SELECT * FROM contact_cord ");
                         </div>     
                         <!-- end page title -->
 
-                        
-                                        <form action = "#" method = "post">
+                        <?php 
+                      if (isset($_GET['resultat'])) {
+
+                       if ($_GET['resultat'] == 'oui') {
+                      ?>
+
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                    Contact Ajouter avec succes.
+                                    
+                                    </div></div>
+
+                          <?php  }else{ 
+                              if ($_GET['resultat'] == 'ouiModif')
+                              ?>
+                            
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                    Contact Modifier avec succes.
+                                    
+                                    </div></div>
+                          <?php } 
+                            }?>      
+                                       
                                         
 
                                      
@@ -113,8 +137,8 @@ $req = $bdd->query("SELECT * FROM contact_cord ");
         <td><?php echo $donnees['fax']; ?></td>
         <td>
         
-        <a href="modifiercoordonnee.php?id=<?php echo $donnees['id']; ?>">Modifier</a>||
-        <a href="suppcontact.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
+        <a href="modifiercoordonnee.php?id=<?php echo $donnees['id']; ?>">Modifier</a>||<a href="Controller/supp_contact.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
+
         </td>
       </tr>
       
@@ -134,7 +158,7 @@ $req = $bdd->query("SELECT * FROM contact_cord ");
                                         
                                           
                                        
-                                        </form>
+                                        
 
                                     </div>
                                 </div>
@@ -147,20 +171,7 @@ $req = $bdd->query("SELECT * FROM contact_cord ");
                 <!-- End Page-content -->
 
                 
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Skote.
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="text-sm-right d-none d-sm-block">
-                                    Design & Develop by Themesbrand
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <?php include("includes/footer2.php") ?>
             </div>
             <!-- end main content-->
 

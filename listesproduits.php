@@ -91,7 +91,7 @@ $req = $bdd->query("SELECT * FROM produit ");
                           <br><div class="container"><div class="alert alert-success alert-dismissible">
                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                     
-                                    Recette Ajouter avec succes.
+                                    Produit Ajouter avec succes.
                                     
                                     </div></div>
 
@@ -102,7 +102,7 @@ $req = $bdd->query("SELECT * FROM produit ");
                           <br><div class="container"><div class="alert alert-success alert-dismissible">
                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                     
-                                    Recette Modifier avec succes.
+                                    Produit Modifier avec succes.
                                     
                                     </div></div>
                           <?php } 
@@ -142,8 +142,8 @@ $req = $bdd->query("SELECT * FROM produit ");
         <td><?php echo $donnees['description']; ?></td>
         <td>
         
-        <a href="modifierproduct.php?id=<?php echo $donnees['id']; ?>">Modifier</a>||
-        <a href="suppproduit.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
+        <a href="modifierproduct.php?id=<?php echo $donnees['id']; ?>">Modifier</a>||<a href="Controller/supp_produit.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
+
         </td>
         <td ><?php echo $donnees['img']; ?></td>
         <td><?php echo $donnees['produit']; ?></td>
@@ -186,20 +186,7 @@ $req = $bdd->query("SELECT * FROM produit ");
                 <!-- End Page-content -->
 
                 
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Skote.
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="text-sm-right d-none d-sm-block">
-                                    Design & Develop by Themesbrand
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <?php include("includes/footer2.php") ?>
             </div>
             <!-- end main content-->
 
