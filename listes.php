@@ -13,7 +13,7 @@ $req = $bdd->query("SELECT * FROM savez_vous ");
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/projects-create.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:42 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Listes</title>
+        <title>Listes Savez_vous</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -67,12 +67,12 @@ $req = $bdd->query("SELECT * FROM savez_vous ");
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Pages</h4>
+                                    <h4 class="mb-0 font-size-18">Listes Savez_vous</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
-                                            <li class="breadcrumb-item active">Savez_vous</li>
+                                            <li class="breadcrumb-item active">Listes Savez_vous</li>
                                         </ol>
                                     </div>
                                     
@@ -112,7 +112,7 @@ $req = $bdd->query("SELECT * FROM savez_vous ");
         <td>
         
         <a href="modifiersavez_vous.php?id=<?php echo $donnees['id']; ?>">Modifier</a>||
-        <a href="suppsavez_vous.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
+        <a href="Controller/supp_savezvous.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
         </td>
       </tr>
       

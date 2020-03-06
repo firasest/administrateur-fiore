@@ -84,7 +84,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                     <li><a href="listes.php">Listes Savez_vous</a></li>
-                    <li><a href="Ajouterqui_somme_nous.php">Ajouter Savez vous</a></li>
+                    <li><a href="ajoutersavezvous.php">Ajouter Savez vous</a></li>
                     <li><a href="listesqsn.php">Listes Qui_somme_nous</a></li>
                         
                         <li><a href="Ajouterqui_somme_nous.php">Ajouter Qui somme nous</a></li>

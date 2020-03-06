@@ -5,7 +5,7 @@
     
 <head>
         <meta charset="utf-8" />
-        <title>Ajouter Recette </title>
+        <title>Ajouter Savez_vous </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -59,12 +59,12 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Ajouter Recette</h4>
+                                    <h4 class="mb-0 font-size-18">Ajouter Savez_vous</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
-                                            <li class="breadcrumb-item active">Ajouter Recette</li>
+                                            <li class="breadcrumb-item active">Ajouter Savez_vous</li>
                                         </ol>
                                     </div>
                                     
@@ -77,12 +77,12 @@
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title mb-4">Ajouter Recette</h4>
+                                        <h4 class="card-title mb-4">Ajouter Savez_vous</h4>
                                         
                                         
 
 		
-                                        <form action="Controller/ajouter_recette.php" method="post">
+                                        <form action="Controller/ajouter_savezvous.php" method="post">
                    
 
 									<input type="text" value="../fiore/images/sv/002.png" name="img" hidden="hidden">

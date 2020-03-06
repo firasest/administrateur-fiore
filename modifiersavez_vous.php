@@ -84,55 +84,29 @@ $donnees = $req->fetch();
                                 <div class="card">
                                     <div class="card-body">
                                         <h4 class="card-title mb-4">Modifier Savez_vous</h4>
-                                        <form action = "#" method = "post">
-                                        
-
-                                     
-                                     
-                                        <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Image </label>
-                                                <div class="col-lg-10">
-                                                <form action="upload.php" method="post" enctype="multipart/form-data">
-                                                Sélectionnez l'image à télécharger:
-                                                     <input type="file" name="fileToUpload" id="fileToUpload" value="<?php echo $donnees['img']; ?>">
-                                                     <input type="submit" value="Upload Image" name="submit">
-                                               
-                                                 </div>
-                                                </div>
-                                            <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Titre</label>
-                                                <div class="col-lg-10">
-                                                    <input id="projectname" name="titre" type="text" class="form-control" placeholder="Titre" value="<?php echo $donnees['titre']; ?>">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                        <label for="productdesc">Description</label>
-                                                        <textarea class="form-control" id="productdesc" name="description" rows="5"  > <?php echo $donnees['description']; ?></textarea>
-                                           </div>
-
-                                            
-
-                                            
-                                            
-
-
-                                            
-
-                                            
-
-                                            
-                                        
-                                            </div>
-                                        </div>
-                                        <div class="row justify-content-end">
-                                            <div class="col-lg-10">
-                                                <button type="submit" name="modifier" class="btn btn-primary">Modifier</button>
-                                            </div>
-                                        </div>
-                                       
-                                        </form>
-
+                                        <form action="Controller/modifier_savezvous.php?id=<?php echo $donnees['id']; ?>" method="post">
+                     
+									
+                     <div class="form-group row mb-4">
+                                 <label for="projectname" class="col-form-label col-lg-2">Titre</label>
+                                 <div class="col-lg-10">
+                                     <input id="projectname" name="titre" type="text" class="form-control" placeholder="Titre" value="<?php echo $donnees['titre']; ?>">
+                                 </div>
+                             </div>
+                             <div class="form-group">
+                                         <label for="productdesc">Description</label>
+                                         <textarea class="form-control" id="productdesc" name="description" rows="5"  > <?php echo $donnees['description']; ?></textarea>
+                            </div>
+                     
+                     
+                     
+                     <button class="btn btn-primary btn-lg btn-animated btn-style-1" type="submit">
+                     <span class="btn-label">Modifier</span>
+                     <span class="btn-icon fa fa-envelope"></span>
+                     </button>
+                     
+                     
+                 </form> 
                                     </div>
                                 </div>
                             </div>
