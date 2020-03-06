@@ -1,19 +1,10 @@
-<?php
-
-include("includes/connect_db.php");
-$id= $_GET['id'];
-$req = $bdd->query("SELECT * FROM produit WHERE id=$id");
-$donnees = $req->fetch();
-
- ?>
 <!doctype html>
 <html lang="en">
 
     
-<!-- Mirrored from themesbrand.com/skote/layouts/vertical/projects-create.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:42 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Supprimer Produits </title>
+        <title>Ajouter Contact </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -67,12 +58,12 @@ $donnees = $req->fetch();
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Supprimer Produits </h4>
+                                    <h4 class="mb-0 font-size-18">Ajouter Contact</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
-                                            <li class="breadcrumb-item active">Supprimer Produits </li>
+                                            <li class="breadcrumb-item active">Ajouter Contact</li>
                                         </ol>
                                     </div>
                                     
@@ -85,84 +76,36 @@ $donnees = $req->fetch();
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title mb-4">Supprimer Produits </h4>
-                                        <form action="Controller/supp_produit.php" method="post">
+                                        <h4 class="card-title mb-4">Ajouter Contact</h4>
+                                        <form action="Controller/ajouter_contact.php" method="post">
                                             <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Titre</label>
+                                                <label for="projectname" class="col-form-label col-lg-2">Adresse</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="adresse" type="text" class="form-control" value="<?php echo $donnees['titre'];?>"
+                                                    <input id="projectname" name="adresse" type="text" class="form-control" 
                                                     placeholder="Adresse">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Description</label>
+                                                <label for="projectname" class="col-form-label col-lg-2">email</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="email" type="text" class="form-control" value="<?php echo $donnees['description'];?>"
+                                                    <input id="projectname" name="email" type="text" class="form-control" 
                                                     placeholder="Email">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Image</label>
+                                                <label for="projectname" class="col-form-label col-lg-2">tel</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="tel" type="text" class="form-control" value="<?php echo $donnees['img'];?>"
+                                                    <input id="projectname" name="tel" type="text" class="form-control" 
                                                     placeholder="Tel">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">produit</label>
+                                                <label for="projectname" class="col-form-label col-lg-2">fax</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['produit'];?>"
-                                                    placeholder="Fax">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">code_produit</label>
-                                                <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['code_produit'];?>"
-                                                    placeholder="Fax">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">poids</label>
-                                                <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['poids'];?>"
-                                                    placeholder="Fax">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Code_Ean</label>
-                                                <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['code_ean'];?>"
-                                                    placeholder="Fax">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">DLC</label>
-                                                <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['dlc'];?>"
-                                                    placeholder="Fax">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Categorie</label>
-                                                <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['catagorie'];?>"
-                                                    placeholder="Fax">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row mb-4">
-                                                <label for="projectname" class="col-form-label col-lg-2">Categorie2</label>
-                                                <div class="col-lg-10">
-                                                    <input id="projectname" name="projectname" type="text" class="form-control" value="<?php echo $donnees['catagorie2'];?>"
+                                                    <input id="projectname" name="fax" type="text" class="form-control" 
                                                     placeholder="Fax">
                                                 </div>
                                             </div>
@@ -178,10 +121,10 @@ $donnees = $req->fetch();
                                         </div>
                                         <div class="row justify-content-end">
                                             <div class="col-lg-10">
-                                                <button type="submit" name="modifier" class="btn btn-primary">Supprimer  </button>
+                                                <button type="submit" name="ajouter" class="btn btn-primary">Ajouter</button>
                                             </div>
                                         </div>
-
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -193,20 +136,7 @@ $donnees = $req->fetch();
                 <!-- End Page-content -->
 
                 
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Skote.
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="text-sm-right d-none d-sm-block">
-                                    Design & Develop by Themesbrand
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <?php include("includes/footer2.php") ?>
             </div>
             <!-- end main content-->
 

@@ -22,6 +22,32 @@
     </head>
 
     <body>
+    <?php 
+                      if (isset($_GET['resultat'])) {
+
+                       if ($_GET['resultat'] == 'oui') {
+                      ?>
+
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                   Admin Ajouter avec succes.
+                                    
+                                    </div></div>
+
+                          <?php  }else{ 
+                              if ($_GET['resultat'] == 'ouiModif')
+                              ?>
+                            
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                    Admin Modifier avec succes.
+                                    
+                                    </div></div>
+                          <?php } 
+                            }?>        
+                                     
         <div class="home-btn d-none d-sm-block">
             <a href="#" class="text-dark"><i class="fas fa-home h2"></i></a>
         </div>
@@ -84,7 +110,7 @@
                             </div>
                         </div>
                         <div class="mt-5 text-center">
-                            <p>Vous n'avez pas de compte? <a href="auth-register.html" class="font-weight-medium text-primary"> S'inscrire maintenant </a> </p>
+                            <p>Vous n'avez pas de compte? <a href="auth-register.php" class="font-weight-medium text-primary"> S'inscrire maintenant </a> </p>
                             <p>© 2020 Fiore. Fabriqué avec <i class="mdi mdi-heart text-danger"></i> par Designet</p>
                         </div>
 

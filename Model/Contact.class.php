@@ -13,8 +13,8 @@ function __construct($adresse,$email,$tel,$fax){
  
 $this->adresse = $adresse;
 $this->email = addslashes($email);
-$this->email = addslashes($tel);
-$this->email = addslashes($fax);
+$this->tel = addslashes($tel);
+$this->fax = addslashes($fax);
 
 
 

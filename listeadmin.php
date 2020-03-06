@@ -1,4 +1,11 @@
+<?php
+session_start();
+include("includes/connect_db.php");
 
+$req = $bdd->query("SELECT * FROM  `admin` ");
+$donnees = $req->fetch();
+
+ ?>
 <!doctype html>
 <html lang="en">
 
@@ -56,32 +63,36 @@
                                     </a>
                                 </div>
                                 <div class="p-2">
-                                    <form class="form-horizontal" action="Controller/ajouter_admin.php" method="post">
+                                    <form class="form-horizontal" action="Controller/modifier_admin.php?id=<?php echo $donnees['id'] ?>" method="post">
             
                                         
-                
+                                    
                                         <div class="form-group">
                                             <label for="username">Nom d'utilisateur</label>
-                                            <input type="text" class="form-control" id="username"  name="login" placeholder="Saisissez votre nom d'utilisateur">
+                                            <input type="text" class="form-control" id="username"  name="login" 
+                                            placeholder="Saisissez votre nom d'utilisateur" value="<?php echo $donnees['login']; ?>">
                                         </div>
                 
                                         <div class="form-group">
                                             <label for="userpassword">Mot de passe</label>
-                                            <input type="password" class="form-control" id="userpassword" name="password"  placeholder="Saisissez votre Mot de passe">        
+                                            <input type="password" class="form-control" id="userpassword" name="password"  
+                                            placeholder="Saisissez votre Mot de passe" value="<?php echo $donnees['password']; ?>">        
                                         </div>
 
                                         <div class="form-group">
                                             <label for="useremail">Email</label>
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Saisissez votre Email">        
+                                            <input type="email" class="form-control" id="email" name="email"
+                                             placeholder="Saisissez votre Email" value="<?php echo $donnees['email']; ?>">        
                                         </div>
                     
                                         <div class="mt-4">
-                                            <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">S'inscrire</button>
+                                            <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Modifier</button>
                                         </div>
                 
                                         <div class="mt-4 text-center">
                                             <p class="mb-0">En vous inscrivant, vous acceptez la Fiore <a href="#" class="text-primary">Conditions d'utilisation</a></p>
                                         </div>
+                                       
                                     </form>
                                 </div>
             

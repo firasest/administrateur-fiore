@@ -65,12 +65,12 @@ $donnees = $req->fetch();
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Pages</h4>
+                                    <h4 class="mb-0 font-size-18">Modifier Qui_somme_nous</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
-                                            <li class="breadcrumb-item active">Qui_somme_nous</li>
+                                            <li class="breadcrumb-item active">Modifier Qui_somme_nous</li>
                                         </ol>
                                     </div>
                                     
@@ -83,7 +83,7 @@ $donnees = $req->fetch();
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title mb-4">Modifier Qui_somme_nous rtr</h4>
+                                        <h4 class="card-title mb-4">Modifier Qui_somme_nous </h4>
                                         
                                         
 
@@ -123,7 +123,7 @@ $donnees = $req->fetch();
                 <!-- End Page-content -->
 
                 
-                <?php include("includes/footeradmin.php") ?>
+                <?php include("includes/footer2.php") ?>
             </div>
             <!-- end main content-->
 

@@ -122,7 +122,7 @@ $donnees = $req->fetch();
                 <!-- End Page-content -->
 
                 
-                <?php include("includes/footeradmin.php") ?>
+                <?php include("includes/footer2.php") ?>
             </div>
             <!-- end main content-->
 

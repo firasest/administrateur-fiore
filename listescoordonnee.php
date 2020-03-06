@@ -104,6 +104,8 @@ $req = $bdd->query("SELECT * FROM contact_cord ");
                                     Contact Modifier avec succes.
                                     
                                     </div></div>
+
+                                    
                           <?php } 
                             }?>      
                                        

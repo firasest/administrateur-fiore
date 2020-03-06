@@ -67,7 +67,7 @@ $req = $bdd->query("SELECT * FROM quisommenous ");
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Pages</h4>
+                                    <h4 class="mb-0 font-size-18">Qui somme nous</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
@@ -125,8 +125,8 @@ $req = $bdd->query("SELECT * FROM quisommenous ");
         <td><?php echo $donnees['description']; ?></td>
         <td>
         
-        <a href="Controller/modifier_about.php?id=<?php echo $donnees['id']; ?>">Modifier</a>
-||<a href="suppquisommenous.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
+        <a href="modifierqui_somme_nous.php?id=<?php echo $donnees['id']; ?>">Modifier</a>||<a href="Controller/supp_about.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
+
         </td>
       </tr>
       
@@ -159,20 +159,7 @@ $req = $bdd->query("SELECT * FROM quisommenous ");
                 <!-- End Page-content -->
 
                 
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Skote.
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="text-sm-right d-none d-sm-block">
-                                    Design & Develop by Themesbrand
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <?php include("includes/footer2.php") ?>
             </div>
             <!-- end main content-->
 

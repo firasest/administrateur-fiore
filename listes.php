@@ -82,7 +82,7 @@ $req = $bdd->query("SELECT * FROM savez_vous ");
                         <!-- end page title -->
 
                         
-                                        <form action = "#" method = "post">
+                                        
                                         
 
                                      
@@ -132,7 +132,7 @@ $req = $bdd->query("SELECT * FROM savez_vous ");
                                         
                                           
                                        
-                                        </form>
+                                       
 
                                     </div>
                                 </div>
@@ -144,21 +144,7 @@ $req = $bdd->query("SELECT * FROM savez_vous ");
                 </div>
                 <!-- End Page-content -->
 
-                
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Skote.
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="text-sm-right d-none d-sm-block">
-                                    Design & Develop by Themesbrand
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <?php include("includes/footer2.php") ?>
             </div>
             <!-- end main content-->
 

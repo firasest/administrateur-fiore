@@ -1,14 +1,14 @@
 <?php
-class About{
-
+class Recette{
+private $img;
 private $titre;
 private $description;
 
 
                 
 
-function __construct($titre,$description){
-
+function __construct($img,$titre,$description){
+$this->img = $img;
 $this->titre = $titre;
 $this->description = addslashes($description);
 
@@ -22,7 +22,7 @@ public function ajouter(){
   include('../includes/connect_db.php');
       
     
-      $req = $bdd->exec ("INSERT INTO `quisommenous`(`titre`, `description`) VALUES ('$this->titre','$this->description')");
+      $req = $bdd->exec ("INSERT INTO `recette`(`img`, `titre`, `description`) VALUES ('$this->img','$this->titre','$this->description')");
       
       echo'oui';
                   //return TRUE;
@@ -36,7 +36,7 @@ public function ajouter(){
 
     $id=$_GET['id'];
         
-    $req=$bdd->exec("UPDATE `quisommenous` SET  `titre`='$this->titre',`description`='$this->description' WHERE id=$id");
+    $req=$bdd->exec("UPDATE `recette` SET  `titre`='$this->titre',`description`='$this->description' WHERE id=$id");
     
     
     echo'oui';
@@ -49,7 +49,7 @@ public function supprimer(){
     
 	include('../includes/connect_db.php');
 
-    $req = $bdd->exec('DELETE FROM quisommenous WHERE id=\''.$_GET['id'].'\''); 
+    $req = $bdd->exec('DELETE FROM recette WHERE id=\''.$_GET['id'].'\''); 
  
 		echo'oui';	
  

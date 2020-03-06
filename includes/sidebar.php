@@ -57,7 +57,8 @@
                         <span>Coordonnee Contact</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="listescoordonnee.php">Listes contact</a></li>
+                        <li><a href="listescoordonnee.php">Listes Contact</a></li>
+                        <li><a href="Ajoutercoordonnee.php">Ajouter Contact</a></li>
                         
                     </ul>
                 </li>
@@ -83,9 +84,10 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                     <li><a href="listes.php">Listes Savez_vous</a></li>
+                    <li><a href="Ajouterqui_somme_nous.php">Ajouter Savez vous</a></li>
                     <li><a href="listesqsn.php">Listes Qui_somme_nous</a></li>
-                       <!-- <li><a href="savez_vous.php">Savez_vous</a></li>
-                        <li><a href="qui_somme_nous">Qui somme nous</a></li>-->
+                        
+                        <li><a href="Ajouterqui_somme_nous.php">Ajouter Qui somme nous</a></li>
                         
                     </ul>
                 </li>

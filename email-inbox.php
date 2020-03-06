@@ -12,7 +12,7 @@ $donnees = $req->fetch();
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/email-inbox.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:34 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Inbox </title>
+        <title>Boite de Recepition </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -64,12 +64,12 @@ $donnees = $req->fetch();
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Inbox</h4>
+                                    <h4 class="mb-0 font-size-18">Boite</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Email</a></li>
-                                            <li class="breadcrumb-item active">Inbox</li>
+                                            <li class="breadcrumb-item active">Boite</li>
                                         </ol>
                                     </div>
                                     
@@ -77,16 +77,32 @@ $donnees = $req->fetch();
                             </div>
                         </div>     
                         <!-- end page title -->
+                        <?php 
+                      if (isset($_GET['resultat'])) {
 
+                       if ($_GET['resultat'] == 'ouiSupp') {
+                      ?>
+
+                          <br><div class="container"><div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    
+                                    Message modifier avec succes.
+                                    
+                                    </div></div>
+
+                          <?php  }else{ ?>
+                            <div class=""></div>
+                          <?php } 
+                            }?>
                         <div class="row">
                             <div class="col-12">
                                 <!-- Left sidebar -->
                                 <div class="email-leftbar card">
+                                    
                                     <button type="button" class="btn btn-danger btn-block waves-effect waves-light" data-toggle="modal" data-target="#composemodal">
-                                        Compose
-                                    </button>
-                                   
                                     <a href="Controller/supp_message.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
+
+                                    </button>
                                     
                                    
                                                                     </div>
@@ -231,20 +247,7 @@ $donnees = $req->fetch();
                 </div>
 
                 
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Skote.
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="text-sm-right d-none d-sm-block">
-                                    Design & Develop by Themesbrand
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <?php include("includes/footer2.php") ?>
             </div>
             <!-- end main content-->
 

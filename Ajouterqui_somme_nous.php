@@ -1,9 +1,3 @@
-<?php
-include("includes/connect_db.php");
-$id= $_GET['id'];
-$req = $bdd->query("SELECT * FROM quisommenous WHERE id=$id");
-$donnees = $req->fetch();
- ?>
 <!doctype html>
 <html lang="en">
 
@@ -11,7 +5,7 @@ $donnees = $req->fetch();
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/projects-create.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:42 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Supprimer Qui_somme_nous </title>
+        <title>Ajouter Qui_somme_nous </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -65,12 +59,12 @@ $donnees = $req->fetch();
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Pages</h4>
+                                    <h4 class="mb-0 font-size-18">Ajouter Qui_somme_nous</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
-                                            <li class="breadcrumb-item active">Supprimer Qui_somme_nous</li>
+                                            <li class="breadcrumb-item active">Ajouter Qui_somme_nous</li>
                                         </ol>
                                     </div>
                                     
@@ -83,28 +77,30 @@ $donnees = $req->fetch();
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title mb-4">Supprimer Qui_somme_nous</h4>
+                                        <h4 class="card-title mb-4">Ajouter Qui_somme_nous </h4>
                                         
                                         
 
 		
-                                        <form action="Controller/suppqsn.php" method="post">
+       <form action="Controller/ajouter_about.php" method="post">
                      
 									
 									<div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">Titre</label>
                                                 <div class="col-lg-10">
-                                                    <input id="projectname" name="titre" type="text" class="form-control" placeholder="Titre" value="<?php echo $donnees['titre']; ?>">
+                                                    <input id="projectname" name="titre" type="text" class="form-control" >
+                                                
                                                 </div>
                                             </div>
-									
                                             <div class="form-group">
                                                         <label for="productdesc">Description</label>
-                                                        <textarea class="form-control" id="productdesc" name="description" rows="5"  > <?php echo $donnees['description']; ?></textarea>
+                                                        <textarea class="form-control" id="productdesc" name="description" rows="5"  > </textarea>
                                            </div>
 									
+									
+									
 									<button class="btn btn-primary btn-lg btn-animated btn-style-1" type="submit">
-									<span class="btn-label">Supprimer</span>
+									<span class="btn-label">Ajouter</span>
 									<span class="btn-icon fa fa-envelope"></span>
 									</button>
 									
@@ -121,7 +117,7 @@ $donnees = $req->fetch();
                 <!-- End Page-content -->
 
                 
-                <?php include("includes/footeradmin.php") ?>
+                <?php include("includes/footer2.php") ?>
             </div>
             <!-- end main content-->
 

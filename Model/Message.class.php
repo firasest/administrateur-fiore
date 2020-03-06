@@ -1,47 +1,21 @@
 <?php
-class Contact{
- 
-private $adresse;
+class Message{
 private $email;
+private $objet;
+private $message;
 
 
                 
 
-function __construct($titre,$description){
+function __construct($email,$objet,$message){
  
-$this->titre = $titre;
-$this->description = addslashes($description);
-
+$this->email = $email;
+$this->objet = addslashes($objet);
+$this->message = addslashes($message);
 
 
 
 }
-
-public function ajouter(){ 
-
-  include('../includes/connect_db.php');
-      
-    
-      $req = $bdd->exec ("INSERT INTO `recette`( `titre`, `description`) VALUES ('$this->titre','$this->description')");
-      
-      echo'oui';
-                  //return TRUE;
-  
-  }
-
-
-    public function modifier(){ 
-
-    include('../includes/connect_db.php');
-
-    $id=$_GET['id'];
-        
-    $req=$bdd->exec("UPDATE `recette` SET  `titre`='$this->titre',`description`='$this->description' WHERE id=$id");
-    
-    
-    echo'oui';
-    //return TRUE;
- 			}
 
 
 
@@ -49,7 +23,7 @@ public function supprimer(){
     
 	include('../includes/connect_db.php');
 
-    $req = $bdd->exec('DELETE FROM recette WHERE id=\''.$_GET['id'].'\''); 
+    $req = $bdd->exec('DELETE FROM message_contact WHERE id=\''.$_GET['id'].'\''); 
  
 		echo'oui';	
  
