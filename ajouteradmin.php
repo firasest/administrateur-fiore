@@ -1,11 +1,3 @@
-<?php
-session_start();
-include("includes/connect_db.php");
-
-$req = $bdd->query("SELECT * FROM admin ");
-//$donnees = $req->fetch();
-
- ?>
 <!doctype html>
 <html lang="en">
 
@@ -13,7 +5,7 @@ $req = $bdd->query("SELECT * FROM admin ");
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/projects-create.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:42 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Listes Admin</title>
+        <title>Ajouter admin </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -67,12 +59,12 @@ $req = $bdd->query("SELECT * FROM admin ");
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Listes Admin</h4>
+                                    <h4 class="mb-0 font-size-18">Ajouter admin </h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Fiore</a></li>
-                                            <li class="breadcrumb-item active">Listes Admin</li>
+                                            <li class="breadcrumb-item active">Ajouter admin </li>
                                         </ol>
                                     </div>
                                     
@@ -81,59 +73,48 @@ $req = $bdd->query("SELECT * FROM admin ");
                         </div>     
                         <!-- end page title -->
 
-                        
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Ajouter admin </h4>
                                         
                                         
 
-                                     
-                                  
+		
+                                        <form action="Controller/ajouter_admin.php" method="post">
+                     
+									
+            
+                                        
+                
+            <div class="form-group">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" class="form-control" id="username"  name="login" 
+                placeholder="Saisissez votre nom d'utilisateur" >
+            </div>
 
-                                            
-                                        <div class="container">
-  <h2>Listes</h2>
-              
-  <table class="table">
-    <thead>
-      <tr>
-        <th>id</th>
-        <th>Login</th>
-        <th>Password</th>
-        <th>Email</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <?php while($donnees = $req->fetch()){ ?>
-    <tbody>
-      <tr>
-        <td><?php echo $donnees['id']; ?></td>
-        <td><?php echo $donnees['login']; ?></td>
-        <td><?php echo $donnees['password']; ?></td>
-        <td><?php echo $donnees['email']; ?></td>
-        <td>
+            <div class="form-group">
+                <label for="userpassword">Mot de passe</label>
+                <input type="password" class="form-control" id="userpassword" name="password"  
+                placeholder="Saisissez votre Mot de passe" >        
+            </div>
+
+            <div class="form-group">
+                <label for="useremail">Email</label>
+                <input type="email" class="form-control" id="email" name="email" 
+                placeholder="Saisissez votre Email" >        
+            </div>
+
+            <div class="mt-4">
+                <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Ajouter</button>
+            </div>
+
+            
         
-        <a href="modifierregister.php?id=<?php echo $donnees['id']; ?>">Modifier</a>||
-        <a href="Controller/supp_admin.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
-        </td>
-      </tr>
-      
-    </tbody>
-    <?php } ?>
-  </table>
-</div>
-                                            
-                                            
-
-
-                                            
-
-                                            
-
-                                            
-                                        
-                                          
-                                       
-                                       
-
+									
+									
+								</form> 
                                     </div>
                                 </div>
                             </div>
@@ -144,6 +125,7 @@ $req = $bdd->query("SELECT * FROM admin ");
                 </div>
                 <!-- End Page-content -->
 
+                
                 <?php include("includes/footer2.php") ?>
             </div>
             <!-- end main content-->
