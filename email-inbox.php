@@ -1,3 +1,4 @@
+
 <?php
 //session_start();
 include("includes/connect_db.php");
@@ -5,6 +6,12 @@ include("includes/connect_db.php");
 $req = $bdd->query("SELECT * FROM message_contact ");
 $donnees = $req->fetch();
  ?>
+ <?php
+session_start();
+if (empty($_SESSION['id'])) {
+header('Location:login.php');
+}else{
+?>
 <!doctype html>
 <html lang="en">
 
@@ -322,3 +329,4 @@ $donnees = $req->fetch();
 
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/email-inbox.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:35 GMT -->
 </html>
+<?php } ?>

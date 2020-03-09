@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (empty($_SESSION['id'])) {
+header('Location:login.php');
+}else{
+?>
 <!doctype html>
 <html lang="en">
 
@@ -225,3 +231,4 @@
 
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/ecommerce-add-product.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:34 GMT -->
 </html>
+<?php } ?>

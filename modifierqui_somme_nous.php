@@ -4,6 +4,12 @@ $id= $_GET['id'];
 $req = $bdd->query("SELECT * FROM quisommenous WHERE id=$id");
 $donnees = $req->fetch();
  ?>
+  <?php
+session_start();
+if (empty($_SESSION['id'])) {
+header('Location:login.php');
+}else{
+?>
 <!doctype html>
 <html lang="en">
 
@@ -198,3 +204,4 @@ $donnees = $req->fetch();
 
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/projects-create.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Feb 2020 15:46:43 GMT -->
 </html>
+<?php } ?>
