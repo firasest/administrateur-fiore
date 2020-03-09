@@ -1,4 +1,5 @@
 <?php
+
 require_once('../Model/Produit.class.php');
 $produit = new Produit(
 $_POST['titre'],

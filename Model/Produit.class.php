@@ -30,10 +30,26 @@ public function ajouter(){
   include('../includes/connect_db.php');
       
     
-      $req = $bdd->exec ("INSERT INTO `produit`(`titre`, `description`, `produit`, `code_produit`,`poids`, `code_ean`, `dlc`,
-      `catagorie`, `catagorie2`,) 
-      VALUES ('$this->titre','$this->description','$this->produit','$this->code_produit','$this->poids','$this->code_ean',
-      '$this->dlc','$this->catagorie','$this->catagorie2')");
+      $req = $bdd->exec ("INSERT INTO `produit`(
+      `titre`,
+      `description`,
+      `produit`,
+      `code_produit`,
+      `poids`, 
+      `code_ean`, 
+      `dlc`,
+      `catagorie`, 
+      `catagorie2`) 
+      VALUES (
+      '$this->titre',
+      '$this->description',
+      '$this->produit',
+      '$this->code_produit',
+      '$this->poids',
+      '$this->code_ean',
+      '$this->dlc',
+      '$this->catagorie',
+      '$this->catagorie2')");
       
       echo'oui';
                   //return TRUE;
@@ -47,15 +63,16 @@ public function ajouter(){
 
     $id=$_GET['id'];
         
-    $req=$bdd->exec("UPDATE `produit` SET  `titre`='$this->titre',
-    `description`='$this->description' 
+    $req=$bdd->exec("UPDATE `produit` SET  
+    `titre`='$this->titre',
+    `description`='$this->description', 
     
-    `produit`='$this->produit' 
-    `code_produit`='$this->code_produit' 
-    `poids`='$this->poids' 
-    `code_ean`='$this->code_ean' 
-    `dlc`='$this->dlc' 
-    `catagorie`='$this->catagorie' 
+    `produit`='$this->produit' ,
+    `code_produit`='$this->code_produit' ,
+    `poids`='$this->poids' ,
+    `code_ean`='$this->code_ean', 
+    `dlc`='$this->dlc', 
+    `catagorie`='$this->catagorie' ,
     `catagorie2`='$this->catagorie2'
     WHERE id=$id");
     
