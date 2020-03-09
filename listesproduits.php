@@ -145,7 +145,7 @@ header('Location:login.php');
       <tr>
         <td><?php echo $donnees['id']; ?></td>
         <td><?php echo $donnees['titre']; ?></td>
-        <td><?php echo $donnees['description']; ?></td>
+        <td ><?php echo $donnees['description']; ?></td>
         <td>
         
         <a href="modifierproduct.php?id=<?php echo $donnees['id']; ?>">Modifier</a>||<a href="Controller/supp_produit.php?id=<?php echo $donnees['id']; ?>">Supprimer</a>
