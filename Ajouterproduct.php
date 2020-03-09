@@ -96,7 +96,7 @@
                                                 </div>
                                             </div>
 
-                                            <input type="text" value="002.png" name="img" hidden="hidden">
+
 
                                             <div class="form-group row mb-4">
                                                 <label for="projectname" class="col-form-label col-lg-2">produit</label>
