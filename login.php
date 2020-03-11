@@ -29,7 +29,7 @@
 </style>
     </head>
 
-    <body>
+    <body style="background-color: #91aee2;">
     <?php 
                       if (isset($_GET['error'])) {
 
@@ -104,8 +104,8 @@
                             </div>
                         </div>
                         <div class="mt-5 text-center">
-                           <!-- <p>Vous n'avez pas de compte? <a href="auth-register.php" class="font-weight-medium text-primary"> S'inscrire maintenant </a> </p>
-                            --><p>© 2020 Fiore. Fabriqué avec <i class="mdi mdi-heart text-danger"></i> par Designet</p>
+                            <p>Vous n'avez pas de compte? <a href="auth-register.php" class="font-weight-medium text-primary"> S'inscrire maintenant </a> </p>
+                            <p>© 2020 Fiore. Fabriqué avec <i class="mdi mdi-heart text-danger"></i> par Designet</p>
                         </div>
 
                     </div>
